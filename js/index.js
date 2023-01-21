@@ -1,7 +1,25 @@
 let salir=false;
+
+function sumar(num1,num2){
+    return num1+num2;
+}
+function restar(num1,num2){
+    return num1-num2;
+}
+function multiplicar(num1,num2){
+    return num1*num2;
+}
+function modulo(num1,num2){
+    return num1%num2;
+}
+function dividir(num1,num2){
+    return num1-num2;
+}
+
 while(!salir){
     let num1=parseInt(prompt("Ingresa el primer numero"));
     let num2=parseInt(prompt("Ingresa el segundo numero"));
+
     let opcion=parseInt(prompt("Ingrese una opcion:"+
     "1:Sumar"+
     "2:Resatar"+
@@ -10,26 +28,26 @@ while(!salir){
     "5:Modulo"+
     "6:Salir"));
     let resultado=0;
-
+    
     switch (opcion){
         case 1:
-            resultado=num1+num2;
+            resultado=sumar(num1,num2);
             break;
             case 2:
-                resultado=num1-num2;
+                resultado= restar(num1,num2);
             break;
             case 3:
-                resultado=num1*num2;
+                resultado= multiplicar(num1,num2);
             break;
             case 4:
                 if(num2==0){
                     alert("No se puede dividir entre cero");
                 }else{
-                    resultado=num1/num2
+                    resultado=dividir(num1,num2);
                 }
             break;
             case 5:
-                resultado=num1%num2;
+                resultado=modulo(num1,num2);
             break;
             case 6:
                 salir=true;
